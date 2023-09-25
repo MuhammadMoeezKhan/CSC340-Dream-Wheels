@@ -3,7 +3,7 @@
     <div class="container">
       <!-- Brand Logo -->
       <a class="navbar-brand" href="/">
-        <img src="@/assets/logo.png" alt="Dream Wheels Logo" class="logo" />
+        <img src="@/assets/images/logo.png" alt="Dream Wheels Logo" class="logo" />
         Dream Wheels
       </a>
 

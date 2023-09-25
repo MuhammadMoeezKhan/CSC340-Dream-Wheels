@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-6">
               <img
-                src= "../assets/logo.png"
+                src= "../assets/images/logo.png"
                 alt="Featured Vehicle"
                 class="img-fluid"
               />
