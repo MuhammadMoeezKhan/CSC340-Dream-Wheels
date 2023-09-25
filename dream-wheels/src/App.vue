@@ -26,6 +26,9 @@ export default {
 </script>
 
 <style>
+/* src/assets/css/app.css */
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
