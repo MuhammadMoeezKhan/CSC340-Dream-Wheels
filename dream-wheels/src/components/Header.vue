@@ -1,7 +1,18 @@
 <template>
     <header>
-      <!-- Introduction Section -->
-      <section class="intro-section">
+      <!-- Video Section -->
+      <section class="video-section">
+        <video autoplay muted loop id="header-video">
+          <source
+            src="https://www.youtube.com/watch?v=_JP0fl3S1uU&pp=ygUgcm9sbHMgcm95Y2Ugd2hpdGUgdmlkZW8gYWVzdGhlaWM%3D"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+  
+      <!-- Information Section -->
+      <section class="info-section">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -11,40 +22,10 @@
             </div>
             <div class="col-md-6">
               <img
-                src= "../assets/images/logo.png"
-                alt="Featured Vehicle"
+                src="@/assets/images/logo.png" 
+                alt="Rolls-Royce"
                 class="img-fluid"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <!-- Promotional Content -->
-      <section class="promo-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h2>Exclusive Offers</h2>
-              <p>Explore our latest promotions and discounts.</p>
-              <a href="/offers" class="btn btn-secondary">View Offers</a>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <!-- Brief Description -->
-      <section class="description-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h2>About Dream Wheels</h2>
-              <p>
-                Dream Wheels is your premier destination for luxury and
-                high-performance vehicles. With a commitment to quality and
-                excellence, we offer a curated selection of the finest
-                automobiles.
-              </p>
             </div>
           </div>
         </div>
@@ -60,43 +41,56 @@
   
   <style scoped>
   /* Custom Styles */
-  .intro-section {
-    background-color: #f8f8f8;
-    padding: 100px 0;
+  header {
+    position: relative;
+    overflow: hidden;
   }
   
-  .intro-section h1 {
+  .video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #header-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .info-section {
+    background-color: #f8f8f8; /* Background color for the information section */
+    padding: 100px 0;
+    color: #333; /* Text color for the information section */
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  h1 {
     font-size: 36px;
     margin-bottom: 20px;
   }
   
-  .intro-section p {
+  p {
     font-size: 18px;
     margin-bottom: 30px;
   }
   
-  .promo-section {
-    background-color: #fff;
-    padding: 80px 0;
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
   }
   
-  .promo-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  .description-section {
-    background-color: #f8f8f8;
-    padding: 80px 0;
-  }
-  
-  .description-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  .description-section p {
-    font-size: 18px;
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
   }
   </style>
   
