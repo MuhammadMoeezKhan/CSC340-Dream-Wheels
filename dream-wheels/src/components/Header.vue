@@ -1,15 +1,15 @@
 <template>
     <header>
-      <!-- Video Section -->
-      <section class="video-section">
-        <video autoplay muted loop id="header-video">
-          <source
-            src="https://www.youtube.com/watch?v=_JP0fl3S1uU&pp=ygUgcm9sbHMgcm95Y2Ugd2hpdGUgdmlkZW8gYWVzdGhlaWM%3D"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </section>
+    <!-- Video Section -->
+    <section class="video-section">
+      <video autoplay muted loop id="header-video">
+        <source
+          src="@/assets/videos/Rolls-Royce-Ghost.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </section>
   
       <!-- Information Section -->
       <section class="info-section">
