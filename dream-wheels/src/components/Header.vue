@@ -9,27 +9,8 @@
         />
         Your browser does not support the video tag.
       </video>
-    </section>
+    </section> 
   
-      <!-- Information Section -->
-      <section class="info-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h1>Welcome to Dream Wheels</h1>
-              <p>Your Destination for Premium Vehicles</p>
-              <a href="/inventory" class="btn btn-primary">View Inventory</a>
-            </div>
-            <div class="col-md-6">
-              <img
-                src="@/assets/images/logo.png" 
-                alt="Rolls-Royce"
-                class="img-fluid"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </header>
   </template>
   
@@ -60,12 +41,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-  }
-  
-  .info-section {
-    background-color: #f8f8f8; /* Background color for the information section */
-    padding: 100px 0;
-    color: #333; /* Text color for the information section */
   }
   
   .container {

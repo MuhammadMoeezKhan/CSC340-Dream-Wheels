@@ -1,49 +1,71 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <!-- Brand Logo -->
-      <a class="navbar-brand" href="/">
-        <img src="@/assets/images/logo.png" alt="Dream Wheels Logo" class="logo" />
-        Dream Wheels
-      </a>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="/">
+          <img src="@/assets/images/logo.png" alt="Dream Wheels Logo" class="logo" />
+          Dream Wheels
+        </a>
 
-      <!-- Mobile Menu Toggle Button -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Navigation Links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/inventory">Inventory</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-        </ul>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" @click="showInventory">Inventory</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+
+    <!-- Inventory Component (Conditional Rendering) -->
+    <div v-if="showInventory">
+      <Inventory />
     </div>
-  </nav>
+  </div>
 </template>
 
 <script>
+import Inventory from '../pages/Inventory.vue'
+
 export default {
-  name: "Navbar",
+  name: 'Navbar',
+  components: {
+    Inventory, // Register the Inventory component
+  },
+  data() {
+    return {
+      showInventory: false,
+    };
+  },
+  methods: {
+    showInventory() {
+      this.showInventory = true;
+    },
+  },
 };
 </script>
 
