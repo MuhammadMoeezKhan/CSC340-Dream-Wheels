@@ -1,99 +1,170 @@
+<!-- Template -->
 <template>
-    <div class="component-container">
-      <div class="header">
-        <h1>Rolls-Royce Boat Tail</h1>
+  <div class="component-container">
+    <!-- Image Container -->
+    <div class="image-container">
+      <!-- Overlay Text -->
+      <div class="overlay-text" v-if="!showVideo">
+        <h1 class="great-vibes-heading">Rolls-Royce Boat Tail</h1>
         <p class="sub-header">A Symphony of Bespoke Luxury</p>
+        <button class="discover-button" @click="playVideo">Discover</button>
       </div>
-      <a href="https://www.rolls-roycemotorcars.com/en_US/home.html" target="_blank">
-      <div class="image-container">
-        <div class="image-wrapper">
-          <img alt="Rolls Royce Boattail" src="../assets/images/Rolls-Royce-Boat-Tail.jpg">
-        </div>
-        <div class="overlay-text">
-          <p class="elegant-paragraph">Indulge in the extraordinary allure of the Rolls-Royce Boat Tail, where opulence meets exclusivity. With only three in existence, this automotive masterpiece is a testament to unparalleled craftsmanship and timeless elegance. Own a piece of history that transcends the boundaries of luxury – where every detail is meticulously tailored to redefine automotive sophistication. #RollsRoyce #BoatTail #LuxuryRedefined</p>
-        </div>
+      <!-- Video Container -->
+      <div class="video-overlay" v-if="showVideo">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/qcEmHLKX2_w"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <button class="close-video-button" @click="closeVideo">Close Video</button>
       </div>
-    </a>
+      <!-- Image -->
+      <div class="image-wrapper">
+        <img alt="Rolls Royce Boattail" src="../assets/images/Rolls-Royce-Boat-Tail.jpg">
+      </div>
     </div>
-  
+  </div>
 </template>
 
 <script>
+// Script
 export default {
-  name: 'Promotion'
-}
+  data() {
+    return {
+      showVideo: false,
+    };
+  },
+  methods: {
+    playVideo() {
+      this.showVideo = true;
+    },
+    closeVideo() {
+      this.showVideo = false;
+    },
+  },
+};
 </script>
 
 <style scoped>
-/* Container styling */
-.component-container {
-  padding: 40px 400px;
-  text-align: center;
-}
+  /* Styling */
+  /* Font Import */
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-/* Header styling */
-.header {
-  margin-bottom: 30px;
-}
+  /* Container Styles */
+  .component-container {
+    text-align: center;
+    position: relative;
+  }
 
-.header h1 {
-  font-family: 'Your Elegant Font', sans-serif; /* Replace 'Your Elegant Font' with the desired font */
-  font-size: 40px;
-  margin: 0;
-}
+  /* Image Container Styles */
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
 
-.sub-header {
-  font-size: 18px;
-  color: #777;
-}
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-/* Image container styling */
-.image-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-top: 20px;
-}
+  /* Image Styles */
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
 
-.image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .image-container:hover img {
+    transform: scale(1.1);
+  }
 
-/* Image styling */
-.image-container img {
-  width: auto;
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-}
+  /* Overlay Text Styles */
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1; /* Ensure the overlay text is above the image */
+  }
 
-.image-container:hover img {
-  transform: scale(1.1);
-}
+  /* Great Vibes Heading Styles */
+  .great-vibes-heading {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    margin: 0;
+  }
 
-/* Description overlay styling */
-.overlay-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
+  /* Sub-header Styles */
+  .sub-header {
+    font-size: 24px;
+    color: #bfbfbf;
+    margin-top: 10px;
+  }
 
-/* Elegant paragraph styling */
-.overlay-text .elegant-paragraph {
-  font-family: 'Your Elegant Font', sans-serif; /* Replace 'Your Elegant Font' with the desired font */
-  font-size: 12px;
-}
+  /* Discover Button Styles */
+  .discover-button {
+    font-family: 'Your Elegant Font', sans-serif;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .discover-button:hover {
+    background-color: #333;
+  }
+
+  /* Video Overlay Styles */
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure the video overlay is above the image and text */
+  }
+
+  /* Close Video Button Styles */
+  .close-video-button {
+    font-family: 'Your Elegant Font', sans-serif;
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+
+  .close-video-button:hover {
+    background-color: #ddd;
+  }
+
+  /* Video Styles */
+  iframe {
+    width: 80%;
+    height: 60vh;
+    max-width: 800px;
+    margin: 20px auto;
+    display: block;
+  }
 </style>
