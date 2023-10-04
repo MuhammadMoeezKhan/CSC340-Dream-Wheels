@@ -28,7 +28,7 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="showInventory">Inventory</a>
+              <a class="nav-link" @click="toggleInventory">Inventory</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
@@ -62,8 +62,8 @@ export default {
     };
   },
   methods: {
-    showInventory() {
-      this.showInventory = true;
+    toggleInventory() { // Renamed the method to toggleInventory
+      this.showInventory = !this.showInventory; // Toggle the value
     },
   },
 };

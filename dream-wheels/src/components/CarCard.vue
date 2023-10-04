@@ -1,6 +1,8 @@
 <template>
     <div class="car-card">
-      <img :src="image" :alt="name" class="car-image" />
+      <div class="car-image">
+        <img :src="image" :alt="name" />
+      </div>
       <div class="car-details">
         <h2 class="car-name">{{ name }}</h2>
         <p class="car-description">{{ description }}</p>
@@ -25,29 +27,29 @@
   
   <style scoped>
   .car-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    background-color: #fff;
+    max-width: 300px; /* Adjust the card's maximum width as needed */
+    margin: 20px;
   }
   
-  .car-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .car-image {
+  .car-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
   
   .car-details {
-    margin-top: 16px;
+    text-align: center;
+    padding: 16px;
   }
   
   .car-name {
@@ -58,7 +60,7 @@
   
   .car-description {
     font-size: 1.2rem;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
   
   .car-price {
