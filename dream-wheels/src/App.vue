@@ -4,6 +4,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Navbar />
     <Header />
+    <Promotion />
     <MoreInformation />
     <Footer />
   </div>
@@ -14,6 +15,7 @@
 import Navbar from './components/Navbar.vue'
 import Header from './components/Header.vue'
 import MoreInformation from './components/MoreInformation.vue'
+import Promotion from './components/Promotion.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -23,6 +25,7 @@ export default {
     Navbar,
     Header,
     MoreInformation,
+    Promotion,
     Footer
   }
 }
