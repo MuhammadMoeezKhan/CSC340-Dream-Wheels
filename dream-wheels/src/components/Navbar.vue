@@ -23,14 +23,14 @@
             <li class="nav-item">
               <a class="nav-link" @click="scrollToComponent('home')">Home</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" @click="toggleInventory">Inventory</a>
+            <li class="nav-item">
+              <a class="nav-link" @click="scrollToComponent('inventory')">Inventory</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" @click="scrollToComponent('about')">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
+              <a class="nav-link" @click="scrollToComponent('contact')">Contact</a>
             </li>
           </ul>
         </div>
@@ -44,16 +44,14 @@
 </template>
 
 <script>
-import Inventory from '../pages/Inventory.vue';
 
 export default {
   name: 'Navbar',
   components: {
-    Inventory,
   },
   data() {
     return {
-      showInventory: false,
+      //showInventory: false,
     };
   },
   methods: {

@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import CarCard from '@/components/CarCard.vue';
+import CarCard from './CarCard.vue';
 
 export default {
   name: 'Inventory',

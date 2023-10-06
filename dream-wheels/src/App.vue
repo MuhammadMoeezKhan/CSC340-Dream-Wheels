@@ -3,7 +3,8 @@
     <Navbar />
     <Header />
     <Promotion />
-    <MoreInformation />
+    <!-- <MoreInformation /> -->
+    <InventoryVue/>
     <About />
     <Footer />
   </div>
@@ -16,6 +17,7 @@ import MoreInformation from './components/MoreInformation.vue';
 import Promotion from './components/Promotion.vue';
 import Footer from './components/Footer.vue';
 import About from './components/About.vue'
+import InventoryVue from './components/Inventory.vue';
 
 export default {
   name: 'App',
@@ -25,7 +27,8 @@ export default {
     MoreInformation,
     Promotion,
     Footer,
-    About
+    About,
+    InventoryVue
   },
 };
 </script>
