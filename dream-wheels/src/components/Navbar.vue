@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div id="home">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="/">
           Dream Wheels
@@ -46,7 +46,7 @@ export default {
   name: 'Navbar',
   methods: {
     scrollToComponent(component) {
-      VueScrollTo.scrollTo(`#${component}`, 500, { offset: -50 }); // Adjust the offset as needed
+      VueScrollTo.scrollTo(`#${component}`, 500, { offset: -50 });
     },
   },
 };
@@ -54,6 +54,12 @@ export default {
 
 <style scoped>
 /* Custom Styles */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
 .navbar-brand {
   display: flex;
   align-items: center;
