@@ -3,7 +3,8 @@
     <Navbar />
     <Header />
     <Promotion />
-    <Inventory/>
+    <!-- <MoreInformation /> -->
+    <InventoryVue :cars="carsList" />
     <About />
     <Footer />
   </div>
@@ -15,7 +16,11 @@ import Header from './components/Header.vue';
 import Promotion from './components/Promotion.vue';
 import Footer from './components/Footer.vue';
 import About from './components/About.vue'
-import Inventory from './components/Inventory.vue';
+import InventoryVue from './components/Inventory.vue';
+
+import db from '../firebase/init.js'
+import { col, addDoc, doc, deleteDoc, updateDoc } from 'firebase/firestore'
+import { onSnapshot, collection } from 'firebase/firestore'
 
 export default {
   name: 'App',
@@ -26,6 +31,50 @@ export default {
     Footer,
     About,
     Inventory
+  },
+  data() {
+    return {
+      carsList: []
+    };
+  },
+  mounted() {
+    onSnapshot(collection(db, 'cars'), (querySnapshot) => {
+      const carsArray = [];
+      querySnapshot.forEach((doc) => {
+        const car = {
+          id: doc.id,
+          name: doc.data().name,
+          image: doc.data().image,
+          description: doc.data().description,
+          price: doc.data().price,
+          link: doc.data().link
+        };
+        carsArray.push(car);
+      });
+      this.carsList = carsArray;
+    });
+  },
+  data() {
+    return {
+      carsList: []
+    };
+  },
+  mounted() {
+    onSnapshot(collection(db, 'cars'), (querySnapshot) => {
+      const carsArray = [];
+      querySnapshot.forEach((doc) => {
+        const car = {
+          id: doc.id,
+          name: doc.data().name,
+          image: doc.data().image,
+          description: doc.data().description,
+          price: doc.data().price,
+          link: doc.data().link
+        };
+        carsArray.push(car);
+      });
+      this.carsList = carsArray;
+    });
   },
 };
 </script>
