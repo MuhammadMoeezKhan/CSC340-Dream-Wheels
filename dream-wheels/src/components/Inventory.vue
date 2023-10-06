@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="inventory">
   <h1 class="inventory-title">Car Catalog</h1>
   <div class="car-catalog">
     <div class="car-card-container">

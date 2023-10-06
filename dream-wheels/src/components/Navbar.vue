@@ -36,34 +36,17 @@
         </div>
       </div>
     </nav>
-
-    <div v-if="showInventory">
-      <Inventory />
-    </div>
   </div>
 </template>
 
 <script>
+import VueScrollTo from 'vue-scrollto';
 
 export default {
   name: 'Navbar',
-  components: {
-  },
-  data() {
-    return {
-      //showInventory: false,
-    };
-  },
   methods: {
-    toggleInventory() {
-      this.showInventory = !this.showInventory;
-    },
     scrollToComponent(component) {
-      // Scroll to the specified component
-      const element = document.getElementById(component);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      VueScrollTo.scrollTo(`#${component}`, 500, { offset: -50 }); // Adjust the offset as needed
     },
   },
 };
