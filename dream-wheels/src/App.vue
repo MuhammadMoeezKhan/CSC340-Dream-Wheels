@@ -1,22 +1,21 @@
 <template>
   <div>
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Navbar />
     <Header />
     <Promotion />
-    <!-- <MoreInformation /> -->
+    <MoreInformation />
+    <About />
     <Footer />
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import Navbar from './components/Navbar.vue'
-import Header from './components/Header.vue'
-import MoreInformation from './components/MoreInformation.vue'
-import Promotion from './components/Promotion.vue'
-import Footer from './components/Footer.vue'
+import Navbar from './components/Navbar.vue';
+import Header from './components/Header.vue';
+import MoreInformation from './components/MoreInformation.vue';
+import Promotion from './components/Promotion.vue';
+import Footer from './components/Footer.vue';
+import About from './components/About.vue'
 
 export default {
   name: 'App',
@@ -25,9 +24,10 @@ export default {
     Header,
     MoreInformation,
     Promotion,
-    Footer
-  }
-}
+    Footer,
+    About
+  },
+};
 </script>
 
 <style>
