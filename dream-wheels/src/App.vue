@@ -5,7 +5,7 @@
     <Navbar />
     <Header />
     <Promotion />
-    <MoreInformation />
+    <!-- <MoreInformation /> -->
     <Footer />
   </div>
 </template>
@@ -21,7 +21,6 @@ import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
     Navbar,
     Header,
     MoreInformation,

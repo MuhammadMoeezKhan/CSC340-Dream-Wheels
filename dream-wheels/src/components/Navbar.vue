@@ -25,9 +25,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" @click="toggleInventory">View Inventory</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" @click="toggleInventory">Inventory</a>
             </li>
             <li class="nav-item">
@@ -35,7 +35,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contact">Contact</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>

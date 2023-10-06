@@ -7,10 +7,10 @@
             <h4>Contact Us</h4>
             <p>
               Dream Wheels Showroom<br />
-              123 Main Street<br />
-              City, State ZIP<br />
+              408 South Locust Street<br />
+              Greencastle, IN 46135<br />
               Phone: (123) 456-7890<br />
-              Email: info@dreamwheels.com
+              Email: mkhan_2024@depauw.edu
             </p>
           </div>
   
@@ -18,9 +18,9 @@
           <div class="col-md-4">
             <h4>Quick Links</h4>
             <ul class="list-unstyled">
-              <li><a href="/">Home</a></li>
-              <li><a href="/inventory">Inventory</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="https://www.rolls-roycemotorcars.com/en_US/home.html">Main Website</a></li>
+              <li><a href="https://www.rolls-roycemotorcars.com/en_US/showroom/spectre.html">Inventory</a></li>
+              <li><a href="https://www.linkedin.com/company/rolls-royce-motor-cars">Contact</a></li>
             </ul>
           </div>
   
