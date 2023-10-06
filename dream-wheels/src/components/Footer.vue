@@ -10,7 +10,7 @@
             408 South Locust Street<br />
             Greencastle, IN 46135<br />
             Phone: (123) 456-7890<br />
-            Email: mkhan_2024@depauw.edu
+            Email: mkhan_2024@depauw.edu <br>
             Email: hanantariq_2026@depauw.edu
           </p>
         </div>
