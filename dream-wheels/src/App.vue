@@ -6,6 +6,7 @@
     <!-- <MoreInformation /> -->
     <Inventory :cars="carsList" />
     <About />
+    <Contact />
     <Footer />
   </div>
 </template>
@@ -17,6 +18,7 @@ import Promotion from './components/Promotion.vue';
 import Footer from './components/Footer.vue';
 import About from './components/About.vue'
 import Inventory from './components/Inventory.vue';
+import Contact from './components/Contact.vue'
 
 import db from '../firebase/init.js'
 import { col, addDoc, doc, deleteDoc, updateDoc } from 'firebase/firestore'
@@ -30,7 +32,8 @@ export default {
     Promotion,
     Footer,
     About,
-    Inventory
+    Inventory,
+    Contact
   },
   data() {
     return {
