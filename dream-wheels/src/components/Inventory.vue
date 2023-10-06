@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 class="inventory-title">Car Catalog</h1>
+  <div id = "inventory">
+    <h1 class="inventory-title">Car Inventory</h1>
     <div class="car-catalog">
       <div class="car-card-container">
         <div v-for="car in cars" :key="car.id" class="card mb-3 shadow">
@@ -33,7 +33,7 @@ export default {
 
 <style>
 .inventory-title {
-  margin-top: 35px;
+  margin: 50px 0px 40px 0px;
 }
 
 .car-catalog {

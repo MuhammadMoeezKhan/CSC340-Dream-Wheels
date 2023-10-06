@@ -4,7 +4,7 @@
     <Header />
     <Promotion />
     <!-- <MoreInformation /> -->
-    <InventoryVue :cars="carsList" />
+    <Inventory :cars="carsList" />
     <About />
     <Footer />
   </div>
@@ -16,7 +16,7 @@ import Header from './components/Header.vue';
 import Promotion from './components/Promotion.vue';
 import Footer from './components/Footer.vue';
 import About from './components/About.vue'
-import InventoryVue from './components/Inventory.vue';
+import Inventory from './components/Inventory.vue';
 
 import db from '../firebase/init.js'
 import { col, addDoc, doc, deleteDoc, updateDoc } from 'firebase/firestore'
